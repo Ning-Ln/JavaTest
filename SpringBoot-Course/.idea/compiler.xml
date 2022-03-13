@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch02-generatormapper" />
+        <module name="orm-mybatis" />
+        <module name="springboot-first" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch01" target="17" />
+      <module name="ch02-generatormapper" target="17" />
+      <module name="orm-mybatis" target="17" />
+      <module name="springboot-first" target="17" />
+      <module name="springboot-second" target="17" />
+      <module name="springboot-third" target="17" />
+      <module name="SSM-project" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ch02-generatormapper" options="-parameters" />
+      <module name="orm-mybatis" options="-parameters" />
+      <module name="springboot-first" options="-parameters" />
+      <module name="springboot-second" options="-parameters" />
+      <module name="springboot-third" options="-parameters" />
+    </option>
+  </component>
+</project>

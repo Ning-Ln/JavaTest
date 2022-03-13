@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!-- 指定连接数据库的JDBC驱动包所在位置，指定到你本机的完整路径，需确保本地路径下存在该jar -->
+    <classPathEntry location=""/>
+
+    <!-- 配置table表信息内容体，targetRuntime指定采用MyBatis3的版本 -->
+    <context id="tables" targetRuntime="MyBatis3">
+
+        <!-- 抑制生成注释，由于生成的注释都是英文的，可以不让它生成 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <!-- 配置数据库连接信息 -->
+        <!--在url中加入时区-->
+        <!--连接名?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8
+        -->
+        <jdbcConnection driverClass=""
+                        connectionURL=""
+                        userId=""
+                        password="">
+        </jdbcConnection>
+
+
+        <!-- 生成model类，targetPackage指定model类的包名，
+         targetProject指定生成的model放在java的哪个工程下面-->
+
+        <!--targetProject绝对路径到java包即可-->
+
+        <!--project目录即是java文件夹所在目录-->
+        <javaModelGenerator targetPackage="" targetProject="">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+
+        <!-- 生成MyBatis的Mapper.xml文件，targetPackage指定mapper.
+        xml文件的包名， targetProject指定生成的mapper.xml放在java的哪个工程下面 -->
+        <!--一般放在src\mian\resources\mapper中，不用写绝对路径-->
+        <sqlMapGenerator targetPackage="" targetProject="">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- 生成MyBatis的Mapper接口类文件,targetPackage指定Mapper接口类的包名， targetProject指定生成的Mapper接口放在eclipse的哪个工程下面 -->
+        <!--Mapper文件一般放在resources目录下的Mapper文件夹下-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="" targetProject="">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- 数据库表名及对应的Java模型类名 -->
+        <table tableName=""
+               domainObjectName=""
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+    </context>
+</generatorConfiguration>
